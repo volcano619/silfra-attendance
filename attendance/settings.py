@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'attendance.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql', 
-        'NAME': 'd4fgvesob7sd8a',
-        'USER': 'mclzespnvuwdev',
-        'PASSWORD': '1efcd092bcc669e38cf14ccacaf7392348d62351d2d33c5310ec7e4bd69dfccf',
-        'HOST': 'ec2-184-72-248-8.compute-1.amazonaws.com',   # Or an IP Address that your DB is hosted on
+        'NAME': 'd8p4ucvnmu9i5',
+        'USER': 'zxeyqkxjivwgqw',
+        'PASSWORD': '592ce71dd7e898b633361062185bad61516b98dc0d7a3c75e394487819579d00',
+        'HOST': 'ec2-54-235-250-15.compute-1.amazonaws.com',   # Or an IP Address that your DB is hosted on
         'PORT': '5432',
     }
 }
