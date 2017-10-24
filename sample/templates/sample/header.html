@@ -258,7 +258,7 @@ $(function dragChangeCellColor() {
 			//save.onclick = function() { 
 				
 				$.ajax({type: 'POST',
-                url: '/saveData/',                            // some data url
+                url: 'sample/saveData/',                            // some data url
                 data: {param: workHours.length/2, param1: $(getDayName[i]).text(),param2: bla,param3: bla1,param4: bla2},       // some params  
                 success: function (response) {                  // callback
                     if (response.result === 'OK') {
