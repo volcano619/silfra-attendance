@@ -1,6 +1,7 @@
 from django.shortcuts import render
 #from django.http import HttpResponse
 from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseNotAllowed, HttpResponseBadRequest, HttpResponseNotFound, HttpResponse, HttpResponseForbidden
 import datetime
 from sample.models import Post
@@ -10,7 +11,7 @@ def index (request):
 	Datenow = datetime.datetime.now().strftime('%H:%M:%S')
 	return render(request,'sample/test.html',{'Datenow': Datenow})
 	
-
+@csrf_exempt
 def saveData(request):
 	if request.is_ajax():
 		# extract your params (also, remember to validate them)
