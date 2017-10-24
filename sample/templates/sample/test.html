@@ -1,0 +1,373 @@
+{% extends "sample/header.html" %}
+
+{% block content %}
+
+<div>
+<h1 style="margin-bottom: 10px; margin-top: 10px" >Welcome to Silfra Employee Attendance System</h1>
+<h2 style="margin-bottom: 20px">Hi Venkatesh !</h2>
+<h3>{{Datenow}}</h3>
+<h4>{{param}}</h4>
+</div>
+
+<div class="btn-group btn-group-justified" style="margin-bottom: 20px">
+ <div class="btn-group">
+ <button style="margin-right: 5px" id="workHoursBtn" type="button" class="btn btn-info">Working Hours</button>
+ </div>
+ <div class="btn-group">
+<button style="margin-right: 5px" id="vactionBtn" type="button" class="btn btn-danger">Leave</button>
+</div>
+<div class="btn-group">
+<button style="margin-right: 5px" id="breakHoursBtn" type="button" class="btn btn-warning">Lunch Hours</button>
+</div>
+</div>
+                
+                    <div class="page-TimeShifts page-BgGray js-TimeShifts">
+                        <div class="TShifts">
+                            <table class="TShifts__table"><thead><th class="Month"><input type="week"id="getWeek"></th><th colspan="2">1<small>AM</small></th><th colspan="2">2<small>AM</small></th><th colspan="2">3<small>AM</small></th><th colspan="2">4<small>AM</small></th><th colspan="2">5<small>AM</small></th><th colspan="2">6<small>AM</small></th><th colspan="2">7<small>AM</small></th><th colspan="2">8<small>AM</small></th><th colspan="2">9<small>AM</small></th><th colspan="2">10<small>AM</small></th><th colspan="2">11<small>AM</small></th><th colspan="2">12<small>PM</small></th><th colspan="2">1<small>PM</small></th><th colspan="2">2<small>PM</small></th><th colspan="2">3<small>PM</small></th><th colspan="2">4<small>PM</small></th><th colspan="2">5<small>PM</small></th><th colspan="2">6<small>PM</small></th><th colspan="2">7<small>PM</small></th><th colspan="2">8<small>PM</small></th><th colspan="2">9<small>PM</small></th><th colspan="2">10<small>PM</small></th><th colspan="2">11<small>PM</small></th><th colspan="2">12<small>AM</small></th></thead><tbody id="drawWorkTimeTableBody">
+    
+    
+    
+<tr class="row0"><td>Sunday</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                                    <tr class="row1">
+                                        <td>Monday</td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="row2">
+                                        <td>Tuesday</td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="row3">
+                                        <td>Wednesday</td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="row4">
+                                        <td>Thursday</td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="row5">
+                                        <td>Friday</td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="row6">
+                                        <td>Saturday</td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+
+                        </div>
+                                                    <div style="margin-top: 30px">
+                               
+								  <!--<input type="week"id="getDate">-->
+								 <form>
+									<div class="input-group">
+										<span class="input-group-addon">Login</span>
+										<input id="Login" type="datetime-local" class="form-control" name="login" placeholder="Login">
+									</div>
+									<div class="input-group">
+										<span class="input-group-addon">Logout</span>
+										<input id="Logout" type="datetime-local" class="form-control" name="logout" placeholder="Logout">
+									</div>
+								  </form>
+								   <button style="margin-left: 70px;margin-right: 90px;margin-top:10px" id="save" onclick=add_img() type="button" class="btn btn-success">Save</button>
+								   <div class="col-sm-6">
+
+                                            <div class="form-group form-group__half form-group__date">
+                                                                        
+                                                                      
+                                                                    </div>
+                                        </div>
+
+                                </div>
+                    </div>
+
+{% endblock %}
