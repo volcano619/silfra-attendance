@@ -19,5 +19,6 @@ from sample.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-	url(r'^sample/', include('sample.urls')),
+	url(r'^$', include('sample.urls')),
+    #url(r'^sample/', include('sample.urls')),
 ]
