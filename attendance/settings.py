@@ -25,7 +25,7 @@ SECRET_KEY = 'lx#6a4c9=_mv^6pgk3z=upi+u01k3!my@p&6nypq$_v#y&m^gc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['silfra-attendance1.herokuapp.com']
 #ALLOWED_HOSTS = [silfra-attendance1.herokuapp.com]
 
 
