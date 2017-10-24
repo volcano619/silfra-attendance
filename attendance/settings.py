@@ -78,14 +78,25 @@ WSGI_APPLICATION = 'attendance.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'temp23',
-        'USER': 'user',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql', 
+        'NAME': 'd4fgvesob7sd8a',
+        'USER': 'mclzespnvuwdev',
+        'PASSWORD': '1efcd092bcc669e38cf14ccacaf7392348d62351d2d33c5310ec7e4bd69dfccf',
+        'HOST': 'ec2-184-72-248-8.compute-1.amazonaws.com',   # Or an IP Address that your DB is hosted on
+        'PORT': '5432',
     }
 }
+
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.mysql', 
+   #     'NAME': 'temp23',
+    #    'USER': 'user',
+     #   'PASSWORD': 'admin',
+      #  'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+       # 'PORT': '3306',
+ #   }
+#}
 #DATABASES = {
  #   'default': {
   #      'ENGINE': 'django.db.backends.sqlite3',
