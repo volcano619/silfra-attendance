@@ -20,6 +20,8 @@ from . import views
 urlpatterns = [
     url(r'^$',views.index,name='index'),
 	url(r'^saveData/$',views.saveData),
+	url(r'^getdata/$',views.loadData),
+	url(r'^checkLogin/$',views.checkLogin),
 	
 ]
 

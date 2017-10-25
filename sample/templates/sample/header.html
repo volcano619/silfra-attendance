@@ -22,16 +22,16 @@
 <script type="text/javascript">
 $(document).ready(function() {
 
-/*save.onclick = function() { 
-
+loginbt.onclick = function() { 
+				var uName = $('#username').val();
+				var pWord = $('#password').val();
 				$.ajax({type: 'POST',
-                url: '/sample/saveData/',                            // some data url
-                data: {param: 'hello', another_param: 5},       // some params  
+                url: '/sample/checkLogin/',                            // some data url
+                data: {param: uName, param1: pWord},       // some params  
                 success: function (response) {                  // callback
                     if (response.result === 'OK') {
                         if (response.data && typeof(response.data) === 'object') {
-                            // do something with the successful response.data
-                            // e.g. response.data can be a JSON object
+                           window.alert("its working");
                         }
                     } else {
                         // handle an unsuccessful response
@@ -39,7 +39,7 @@ $(document).ready(function() {
                 }
                });
 
-};*/
+}
 
 
 
@@ -253,13 +253,15 @@ $(function dragChangeCellColor() {
             };
 			if(workHours.length != 0){
 			var bla = $('#getWeek').val();
-			var bla1 = $('#Login').val();
-			var bla2 = $('#Logout').val();
+			var bla1 = $('#Login').val().split("T");
+			var bla2 = $('#Logout').val().split("T");
 			//save.onclick = function() { 
-				
+				for(i=0;i==bla1.length;i++){
+				window.alert(bla1[i]);
+				}
 				$.ajax({type: 'POST',
                 url: '/sample/saveData/',                            // some data url
-                data: {param: workHours.length/2, param1: $(getDayName[i]).text(),param2: bla,param3: bla1,param4: bla2},       // some params  
+                data: {param: workHours.length/2, param1: $(getDayName[i]).text(),param2: bla,param3: bla1[1]+" "+bla1[2]+"Hrs",param4: bla2},       // some params  
                 success: function (response) {                  // callback
                     if (response.result === 'OK') {
                         if (response.data && typeof(response.data) === 'object') {
