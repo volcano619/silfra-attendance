@@ -25,7 +25,7 @@ SECRET_KEY = 'lx#6a4c9=_mv^6pgk3z=upi+u01k3!my@p&6nypq$_v#y&m^gc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['silfra-attendance1.herokuapp.com']
+ALLOWED_HOSTS = ['silfra-attendance1.herokuapp.com','127.0.0.1']
 #ALLOWED_HOSTS = [silfra-attendance1.herokuapp.com]
 
 
@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['silfra-attendance1.herokuapp.com']
 
 INSTALLED_APPS = [
 	'sample',
+	'django_tables2',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
