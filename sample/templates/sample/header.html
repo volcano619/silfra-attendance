@@ -22,26 +22,62 @@
 <script type="text/javascript">
 $(document).ready(function() {
 
+
+
+
+try{
+
+logOutbt.onclick = function() { 
+		window.location='/';	
+
+	}
+
+}catch(e){
+
+
+}
+
+try{
+
 loginbt.onclick = function() { 
 				var uName = $('#username').val();
 				var pWord = $('#password').val();
 				$.ajax({type: 'POST',
                 url: '/sample/checkLogin/',                            // some data url
                 data: {param: uName, param1: pWord},       // some params  
-                success: function (response) {                  // callback
-                    if (response.result === 'OK') {
-                        if (response.data && typeof(response.data) === 'object') {
-                           window.alert("its working");
-                        }
-                    } else {
-                        // handle an unsuccessful response
-                    }
+                success: function (response) { 
+							if (response=="admin") {
+								window.location = '/sample/getdata'
+					   					   
+							}
+							
+							else if(response=="user"){
+							window.location = '/sample/'
+							}
+							
+							else {
+								window.alert("Please enter the correct credentials");
+							}
                 }
                });
 
+	}
+
+}catch(e){
+
+
 }
 
+	
+	
+	
+	
+	/*logOutbt.onclick = function() { 
+	window.alert('Hello');
+				window.location='./';
 
+	}*/
+	
 
 ///////////////////////////////////
         /*App Variables*/
@@ -253,15 +289,13 @@ $(function dragChangeCellColor() {
             };
 			if(workHours.length != 0){
 			var bla = $('#getWeek').val();
-			var bla1 = $('#Login').val().split("T");
-			var bla2 = $('#Logout').val().split("T");
+			var bla1 = $('#Login').val();
+			var bla2 = $('#Logout').val();
 			//save.onclick = function() { 
-				for(i=0;i==bla1.length;i++){
-				window.alert(bla1[i]);
-				}
+				
 				$.ajax({type: 'POST',
                 url: '/sample/saveData/',                            // some data url
-                data: {param: workHours.length/2, param1: $(getDayName[i]).text(),param2: bla,param3: bla1[1]+" "+bla1[2]+"Hrs",param4: bla2},       // some params  
+                data: {param: workHours.length/2, param1: $(getDayName[i]).text(),param2: bla,param3: bla1,param4: bla2},       // some params  
                 success: function (response) {                  // callback
                     if (response.result === 'OK') {
                         if (response.data && typeof(response.data) === 'object') {
@@ -277,7 +311,7 @@ $(function dragChangeCellColor() {
 			//};
 			//window.alert(workHours.length);
 			//window.alert($(getDayName[i]).text());
-			window.alert(firstWorkHour+" "+lastWorkHour);
+			//window.alert(firstWorkHour+" "+lastWorkHour);
 			window.alert("Thank You,you have successfully logged in on "+ $(getDayName[i]).text() +" for "+bla);
 			}
             array.push(vars['finalReport' + dayes[i]]);
