@@ -42,7 +42,7 @@ def checkLogin (request):
 			
 	return HttpResponseBadRequest()
 
-
+@csrf_exempt
 def loadData (request):
 	Datenow = dt.today()#+datetime.datetime.now().strftime('%H:%M:%S')
 	table = PostTable(Post.objects.all())
