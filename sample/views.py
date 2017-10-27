@@ -9,11 +9,13 @@ from sample.models import Post
 from sample.tables import PostTable
 # Create your views here.
 
+@csrf_exempt
 def index (request):
 	Datenow = dt.today()#+datetime.datetime.now().strftime('%H:%M:%S')
 	#Datas= Post.objects.get(id="1")
 	return render(request,'sample/test.html',{'Datenow': Datenow})
-	
+
+@csrf_exempt	
 def index2 (request):
 	Datenow = dt.today()#+datetime.datetime.now().strftime('%H:%M:%S')
 	#Datas= Post.objects.get(id="1")
@@ -39,7 +41,8 @@ def checkLogin (request):
 			return HttpResponse('none')
 			
 	return HttpResponseBadRequest()
-	
+
+@csrf_exempt
 def loadData (request):
 	Datenow = dt.today()#+datetime.datetime.now().strftime('%H:%M:%S')
 	table = PostTable(Post.objects.all())
