@@ -46,6 +46,7 @@ def checkLogin (request):
 def loadData (request):
 	Datenow = dt.today()#+datetime.datetime.now().strftime('%H:%M:%S')
 	table = PostTable(Post.objects.all())
+	table.paginate(page=request.GET.get('page', 1), per_page=10)
 	return render(request,'sample/getdata.html',{'Datenow': Datenow,'table':table})
 	
 @csrf_exempt
