@@ -3,6 +3,6 @@ from sample.models import Post
 
 class PostTable(tables.Table):
 	class Meta:
-		attrs={'class':'table'}
+		attrs={'class':'container'}
 		model = Post
 		#attrs = {'class': 'mytable'}
