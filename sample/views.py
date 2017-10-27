@@ -9,7 +9,7 @@ from sample.models import Post
 from sample.tables import PostTable
 # Create your views here.
 
-
+@csrf_exempt
 def index (request):
 	Datenow = dt.today()#+datetime.datetime.now().strftime('%H:%M:%S')
 	#Datas= Post.objects.get(id="1")
